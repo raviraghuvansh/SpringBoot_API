@@ -34,7 +34,7 @@ public class BaseRestController {
 	
 	@GetMapping("/getStudent/{id}")
 	public ResponseEntity<Student> getStudent(@PathVariable("id") int id){
-		Student s = sr.findById(id).orElseThrow(()->new ResponseNotFound("Student", "ID", id));
+		Student s = sr.findById(id).orElseThrow(()->new ResponseNotFound("Student2", "ID", id));
 		return new ResponseEntity<Student>(s, HttpStatus.OK);
 	}
 
